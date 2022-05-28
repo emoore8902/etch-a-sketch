@@ -19,6 +19,6 @@ function createDiv(size){
     const Div = document.createElement('div');
     Div.classList.add('box');
     Div.style.width = '${size}px';
-    Div.style.height = '${size}8px';
+    Div.style.height = '${size}px';
 }
 
