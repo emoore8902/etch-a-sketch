@@ -36,8 +36,7 @@ resetButton.addEventListener("click", function() {
     grid.innerHTML = "";
     grid.style.setProperty("grid-template-columns", `repeat(${userInput.value}, 2fr)`);
     grid.style.setProperty("grid-template-rows", `repeat(${userInput.value}, 2fr)`);
-    createGrid();
-    userInput.value = "";
+    updateGrid();
   });
 
 
