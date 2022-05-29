@@ -34,10 +34,10 @@ userInput.addEventListener("change", updateGrid);
 
 resetButton.addEventListener("click", function() {
     grid.innerHTML = "";
-    userInput.value = "";
-    grid.style.setProperty("grid-template-columns", `repeat(16, 2fr)`);
-    grid.style.setProperty("grid-template-rows", `repeat(16, 2fr)`);
+    grid.style.setProperty("grid-template-columns", `repeat(${userInput.value}, 2fr)`);
+    grid.style.setProperty("grid-template-rows", `repeat(${userInput.value}, 2fr)`);
     createGrid();
+    userInput.value = "";
   });
 
 
