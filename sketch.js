@@ -1,24 +1,27 @@
 const grid = document.querySelector('.grid');
-let gridValue = document.querySelector('.grid-size');
-let gridSize = document.querySelector('input');
-const resetBtn = document.querySelector('.reset');
-const applyGridSize = document.querySelector('.apply');
-let squareSize = 8;
+const userInput = document.getElementById("quantity");
+const resetButton = document.querySelector(".reset");
 
-createGrid(squareSize);
-
-function createGrid(squareSize){
-    for (let i = 0; i < gridSize; i ++){
-        for (let j = 0; j < gridSize; j ++){
-            grid.appendChild(createDiv(grid.clientWidth/gridSize));
-        }
+createGrid = () => {
+    for (let i = 0; i < 256; i ++){
+    const div = document.createElement("div");
+    div.classList.add("square");
+    grid.appendChild(div);
     }
 }
 
-function createDiv(size){
-    const Div = document.createElement('div');
-    Div.classList.add('box');
-    Div.style.width = '${size}px';
-    Div.style.height = '${size}px';
+updateGrid = () => {
+    for (let i = 0; i < userInput * userInput; i ++) {
+
+    }
 }
+
+const square = document.querySelector("div");
+square.addEventListener("mouseover", function(event) {
+    event.target.classList.replace("square", "color");
+});
+
+
+
+createGrid();
 

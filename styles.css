@@ -1,0 +1,29 @@
+html {
+  text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid {
+  margin-top: 100px;
+  display: inline-grid;
+  grid-template-columns: repeat(16, 2fr);
+  grid-template-rows: repeat(16, 2fr);
+  border: 5px solid rgb(190, 0, 0);
+  border-radius: 5px;
+  height: 800px;
+  width: 800px;
+}
+
+.square {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.color {
+  background-color: gray;
+  border: 1px solid black;
+}
