@@ -1,29 +1,48 @@
 html {
   text-align: center;
+  background-color: red;
+  color: gold;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.page {
+  display: grid;
+  margin-left: 100px;
+  margin-right: 1500px;
+  margin-top: 200px;
+}
+
+.reset {
+  background-color: gold;
+  border: none;
 }
 
 .container{
     display: flex;
     justify-content: center;
-    align-items: center;
+
 }
 .grid {
-  margin-top: 100px;
   display: inline-grid;
   grid-template-columns: repeat(16, 2fr);
   grid-template-rows: repeat(16, 2fr);
   border: 5px solid rgb(190, 0, 0);
   border-radius: 5px;
-  height: 800px;
-  width: 800px;
+  height: 1000px;
+  width: 1000px;
 }
+
 
 .square {
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid rgb(179, 179, 179);
 }
 
 .color {
-  background-color: gray;
-  border: 1px solid black;
+  background-color: rgb(179, 179, 179);
+  border: 1px solid rgb(179, 179, 179);
 }
