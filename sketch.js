@@ -14,7 +14,6 @@ createGrid = () => {
 updateGrid = () => {
     grid.innerHTML = '';
     grid.style.setProperty("grid-template-columns", `repeat(${userInput.value}, 2fr)`);
-    console.log(`repeat(${userInput.value}, 2fr)`);
     grid.style.setProperty("grid-template-rows", `repeat(${userInput.value}, 2fr)`);
 
     for (let i = 0; i < userInput.value*userInput.value; i++) {
@@ -34,12 +33,13 @@ userInput.addEventListener("change", updateGrid);
 
 resetButton.addEventListener("click", function() {
     grid.innerHTML = "";
-    if (userInput > 0) { 
+    if (userInput.value > 0) { 
         grid.style.setProperty("grid-template-columns", `repeat(${userInput.value}, 2fr)`);
         grid.style.setProperty("grid-template-rows", `repeat(${userInput.value}, 2fr)`);
         updateGrid();
     } else {
         createGrid();
+        console.log('sup');
     }
   });
 
