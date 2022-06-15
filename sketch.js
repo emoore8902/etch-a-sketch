@@ -34,9 +34,13 @@ userInput.addEventListener("change", updateGrid);
 
 resetButton.addEventListener("click", function() {
     grid.innerHTML = "";
-    grid.style.setProperty("grid-template-columns", `repeat(${userInput.value}, 2fr)`);
-    grid.style.setProperty("grid-template-rows", `repeat(${userInput.value}, 2fr)`);
-    updateGrid();
+    if (userInput > 0) { 
+        grid.style.setProperty("grid-template-columns", `repeat(${userInput.value}, 2fr)`);
+        grid.style.setProperty("grid-template-rows", `repeat(${userInput.value}, 2fr)`);
+        updateGrid();
+    } else {
+        createGrid();
+    }
   });
 
 
